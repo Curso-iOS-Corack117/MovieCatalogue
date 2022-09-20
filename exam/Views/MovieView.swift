@@ -9,7 +9,12 @@ import SwiftUI
 
 struct MovieView: View {
     let movie: Movies.Movie
-    @ObservedObject var imageManager = ImageManager()
+    @ObservedObject var imageManager: ImageManager
+    
+    init(movie: Movies.Movie) {
+        self.movie = movie
+        imageManager = ImageManager(imageName: self.movie.poster_path)
+    }
     
     var body: some View {
         HStack {
@@ -26,8 +31,18 @@ struct MovieView: View {
                 Group {
                     Text(movie.title)
                         .font(.headline)
-                    Text("Popularidad \(movie.popularity_value) / 100")
-                    Text("Promedio de votos \(movie.vote_average_value) / 100")
+                    Text(
+                        String(
+                            format: "popularity %@ of 100".localizedString,
+                            movie.popularity_value
+                        )
+                    )
+                    Text(
+                        String(
+                            format: "vote_average %@ of 100".localizedString,
+                            movie.vote_average_value
+                        )
+                    )
                 }
                 .font(.subheadline)
                 .foregroundColor(Color("movieForegroundColor"))
@@ -43,9 +58,6 @@ struct MovieView: View {
             }
         }
         .frame(height: 100)
-        .onAppear {
-            imageManager.loadImage(imageName: movie.poster_path)
-        }
     }
 }
 

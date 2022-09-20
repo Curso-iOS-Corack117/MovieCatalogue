@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct examApp: App {
+    @StateObject var movieManager = MovieManager(loadFetchData: true)
+    @StateObject var userSettings = UserSettings()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(movieManager)
+                .environmentObject(userSettings)
+//                .environment(\.locale, .init(identifier: userSettings.currentLanguage.tag))
         }
     }
 }
