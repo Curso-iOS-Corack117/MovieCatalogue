@@ -24,6 +24,7 @@ struct ContentView: View {
                         .opacity(0)
                     }
             }
+            .frame(maxWidth: 800)
             .toolbar {
                 Button {
                     manager.update(from: userSettings)
@@ -55,6 +56,7 @@ struct ContentView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
