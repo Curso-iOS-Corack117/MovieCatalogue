@@ -12,7 +12,11 @@ struct K {
     static let baseUrl: String = "https://api.themoviedb.org/3"
     static let moviesUrl: String = "https://api.themoviedb.org/3/movie/top_rated"
     static let languageUrl: String = "https://api.themoviedb.org/3/movie/top_rated"
-    static let baseUrlImage: String = "https://image.tmdb.org/t/p/w154"
+    static let baseUrlImage: String = "https://image.tmdb.org/t/p/w342"
+    static let baseUrlBackdropImage: String = "https://image.tmdb.org/t/p/w1280"
+    
+    static let date: String = "date"
+    static let secondsPerDay: Double = 86400
     
     struct Movies {
         static let moviesKey = "movies"

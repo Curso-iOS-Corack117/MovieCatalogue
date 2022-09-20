@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3470ABC28D960B2008C3065 /* MoviewDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3470ABB28D960B2008C3065 /* MoviewDetailView.swift */; };
+		B3470ABE28DA10B8008C3065 /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3470ABD28DA10B8008C3065 /* JustifiedText.swift */; };
 		B39C5FCF28D6CFB9007D5ECF /* ConfigurationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C5FCE28D6CFB9007D5ECF /* ConfigurationsView.swift */; };
 		B39C5FD128D6D1BA007D5ECF /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C5FD028D6D1BA007D5ECF /* UserSettings.swift */; };
 		B39C5FD328D6D9F6007D5ECF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C5FD228D6D9F6007D5ECF /* Constants.swift */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3470ABB28D960B2008C3065 /* MoviewDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewDetailView.swift; sourceTree = "<group>"; };
+		B3470ABD28DA10B8008C3065 /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
+		B3470ABF28DA393E008C3065 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B39C5FCE28D6CFB9007D5ECF /* ConfigurationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsView.swift; sourceTree = "<group>"; };
 		B39C5FD028D6D1BA007D5ECF /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		B39C5FD228D6D9F6007D5ECF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 				B3E12D7428D4E73200EC103F /* ImageManager.swift */,
 				B3E12D6D28D41E6D00EC103F /* MovieManager.swift */,
 				B3E12D6F28D4620600EC103F /* Movies.swift */,
+				B3470ABD28DA10B8008C3065 /* JustifiedText.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +110,7 @@
 				B39C5FCE28D6CFB9007D5ECF /* ConfigurationsView.swift */,
 				B3E12D6028D4125600EC103F /* ContentView.swift */,
 				B3E12D7228D47FAB00EC103F /* MovieView.swift */,
+				B3470ABB28D960B2008C3065 /* MoviewDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 				en,
 				Base,
 				"es-419",
+				fr,
 			);
 			mainGroup = B3E12D5228D4125600EC103F;
 			productRefGroup = B3E12D5C28D4125600EC103F /* Products */;
@@ -183,7 +191,9 @@
 				B3E12D7328D47FAB00EC103F /* MovieView.swift in Sources */,
 				B3E12D6128D4125600EC103F /* ContentView.swift in Sources */,
 				B3E12D6E28D41E6D00EC103F /* MovieManager.swift in Sources */,
+				B3470ABE28DA10B8008C3065 /* JustifiedText.swift in Sources */,
 				B3E12D7528D4E73200EC103F /* ImageManager.swift in Sources */,
+				B3470ABC28D960B2008C3065 /* MoviewDetailView.swift in Sources */,
 				B39C5FD128D6D1BA007D5ECF /* UserSettings.swift in Sources */,
 				B3E12D7028D4620600EC103F /* Movies.swift in Sources */,
 				B3E12D5F28D4125600EC103F /* examApp.swift in Sources */,
@@ -200,6 +210,7 @@
 			children = (
 				B39C5FD728D6DE9F007D5ECF /* en */,
 				B39C5FD928D6DECE007D5ECF /* es-419 */,
+				B3470ABF28DA393E008C3065 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

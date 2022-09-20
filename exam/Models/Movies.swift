@@ -18,7 +18,8 @@ struct Movies: Decodable {
         let original_language: String
         let popularity: Double
         let overview: String
-        let poster_path: String
+        var poster_path: String
+        let backdrop_path: String
         let vote_average: Double
 //        let release_date: Date
         

@@ -34,6 +34,7 @@ class UserSettings: ObservableObject {
     enum Language: String, CaseIterable, Identifiable {
         case español
         case english
+        case français
         
         var languageString: String {
             rawValue.capitalized
@@ -47,6 +48,7 @@ class UserSettings: ObservableObject {
             switch self {
             case .english: return "en"
             case .español: return "es-419"
+            case .français: return "fr"
             }
         }
         
@@ -55,6 +57,7 @@ class UserSettings: ObservableObject {
             case "en": return .english
             case "es-419": return .español
             case "es": return .español
+            case "fr": return .français
             default:
                 return .english
             }

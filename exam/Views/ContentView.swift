@@ -18,7 +18,7 @@ struct ContentView: View {
             List(movieManager.movies, id: \.id) { movie in
                 MovieView(movie: movie)
                     .overlay {
-                        NavigationLink(destination: Text("Test")) {
+                        NavigationLink(destination: MoviewDetailView(movie: movie)) {
                             EmptyView()
                         }
                         .opacity(0)
@@ -48,6 +48,7 @@ struct ContentView: View {
                                 Button("home-Accept".localizedString) {
                                     isPresenting.toggle()
                                     userSettings.update(from: manager)
+                                    movieManager.loadData(withLanguage: userSettings.movieLang.tag)
                                 }
                             }
                         }
@@ -60,11 +61,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let movieManager: MovieManager = MovieManager(loadFetchData: true)
         let userSettings: UserSettings = UserSettings()
+        let movieManager: MovieManager = MovieManager(loadFetchData: true)
         ContentView()
-            .environmentObject(movieManager)
             .environmentObject(userSettings)
+            .environmentObject(movieManager)
 //            .environment(\.locale, .init(identifier: userSettings.currentLanguage.tag))
     }
 }

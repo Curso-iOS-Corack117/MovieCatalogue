@@ -63,7 +63,7 @@ struct MovieView: View {
 
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
-        let movie = Movies.Movie(id: 1, title: "Tìtulo", original_title: "Tìtulo", original_language: "es-MX", popularity: 10, overview: "Descripcion", poster_path: "/htuuuEwAvDVECMpb0ltLLyZyDDt.jpg", vote_average: 10)
+        let movie = Movies.Movie(id: 1, title: "Tìtulo", original_title: "Tìtulo", original_language: "es-MX", popularity: 10, overview: "Descripcion", poster_path: "/htuuuEwAvDVECMpb0ltLLyZyDDt.jpg", backdrop_path: "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg", vote_average: 10)
         
         MovieView(movie: movie)
             .previewLayout(.sizeThatFits)
