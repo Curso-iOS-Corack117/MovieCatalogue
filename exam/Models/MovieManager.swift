@@ -102,7 +102,6 @@ class MovieManager: ObservableObject {
                         let indexMovie = movies.results.firstIndex(where: {$0.id == movieID})
                         self.currentMovie = movies.results[indexMovie!]
                         if self.userDefaults.data(forKey: K.Movies.moviesKey + self.currentMovieLang!) == nil {
-                            print("Hola")
                             self.userDefaults.set(data, forKey: K.Movies.moviesKey + self.currentMovieLang!)
                         }
                     }
