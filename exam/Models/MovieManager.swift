@@ -26,7 +26,7 @@ class MovieManager: ObservableObject {
         if let dateStored = UserDefaults.standard.object(forKey: K.date) as? Date {
             let timeNow = Date().timeIntervalSince1970
             let timeLapsed = timeNow - dateStored.timeIntervalSince1970
-            if timeLapsed >= 30 {
+            if timeLapsed >= K.secondsPerDay {
                 if let domain = Bundle.main.bundleIdentifier {
                     UserDefaults.standard.removePersistentDomain(forName: domain)
                 }
